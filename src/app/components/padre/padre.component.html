@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+
+<input type="text" [(ngModel)]="nombre" (keyup)="capturarNombre()">
+<input type="text" [(ngModel)]="apellido">
+<p>Edad: {{edad}}</p>
+<br>
+
+    <div *ngIf="infoHijo">
+        <p>Nombre del hijo: {{infoHijo.nombre}}</p>
+        <p>Apellido del hijo: {{infoHijo.apellido}}</p>
+    </div>
+
+<hr>
+<app-hijo [nombrePadre]="nombre" [apellidoPadre]="apellido" [edadPadre]="edad" (enviarDatos)="obtenerDatos($event)"></app-hijo>

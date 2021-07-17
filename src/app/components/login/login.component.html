@@ -1,0 +1,20 @@
+<body class="text-center" [@fadeIn]>
+    <form class="form-signin" #login="ngForm" (ngSubmit)="onSubmit()">
+        <img class="mb-4" width="72" height="72" src="../../../assets/img/logo.png" alt="Logo de agenda">
+        <h1 class="h3 mb-3 font-weight-normal">Plase sign in</h1>
+        
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input [(ngModel)]="user.username" name="username" class="form-control" type="text" id="inputUsername" placeholder="Enter username" required>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input [(ngModel)]="user.password" name="password" class="form-control" type="password" id="inputPassword" placeholder="Enter password" required>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remerber-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!login.form.valid">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+    </form>
+</body>

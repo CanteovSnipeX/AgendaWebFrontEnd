@@ -1,0 +1,13 @@
+#cards{
+    margin: 1rem;
+}
+
+.myClass{
+    display: inline-block;
+    margin: 1.25rem;
+}
+
+img{
+    width: 12rem;
+    margin-left: 15%;
+}
